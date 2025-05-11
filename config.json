@@ -1,0 +1,20 @@
+{
+    "stake_currency": "USDT",
+    "stake_amount": "100%",
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "strategy": "MLStrategy",
+    "timeframe": "5m",
+    "max_open_trades": 3,
+    "entry_pricing": {},
+    "exit_pricing": {},
+    "stoploss": -0.15,
+    "minimal_roi": {
+        "0": 0.2
+    },
+    "telegram": {
+        "enabled": true,
+        "token": "{{ TELEGRAM_TOKEN }}",
+        "chat_id": "{{ TELEGRAM_CHAT_ID }}"
+    }
+}
