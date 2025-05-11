@@ -1,0 +1,18 @@
+{
+    "api_key": "${API_KEY}",
+    "api_secret": "${API_SECRET}",
+    "stake_currency": "USDT",
+    "stake_amount": "100%",
+    "exchange": {
+        "name": "binance",
+        "ccxt_config": {},
+        "type": "spot"
+    },
+    "strategy": "MyStrategy",
+    "timeframe": "5m",
+    "telegram": {
+        "enabled": true,
+        "token": "${TELEGRAM_TOKEN}",
+        "chat_id": "${TELEGRAM_CHAT_ID}"
+    }
+}
