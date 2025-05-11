@@ -27,11 +27,12 @@ RUN pip install --upgrade pip
 # Munkakönyvtár beállítása
 WORKDIR /app
 
-# requirements.txt bemásolása és csomagok telepítése
+# requirements.txt bemásolása és függőségek telepítése
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Projekt fájlok bemásolása
 COPY . .
 
+# Alkalmazás futtatása
 CMD ["python", "main.py"]
