@@ -1,3 +1,4 @@
 freqtrade
-ta
 scikit-learn
+pandas-ta
+
