@@ -1,0 +1,4 @@
+freqtrade
+scikit-learn
+pandas-ta
+TA-Lib
