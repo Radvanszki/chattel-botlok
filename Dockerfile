@@ -1,6 +1,7 @@
+# Alap Docker image
 FROM python:3.9-slim
 
-# Telepítési csomagok és build eszközök
+# Szükséges build eszközök telepítése
 RUN apt-get update && apt-get install -y \
     build-essential \
     gcc \
@@ -11,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# TA-Lib telepítése forráskódból
+# TA-Lib telepítése forrásból
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib && \
@@ -28,7 +29,7 @@ WORKDIR /app
 
 # requirements.txt bemásolása és függőségek telepítése
 COPY requirements.txt .
-RUN pip install --use-pep517 --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Projekt fájlok bemásolása
 COPY . .
